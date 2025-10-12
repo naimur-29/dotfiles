@@ -3,7 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Set a reliable theme. You can change this later.
 # Remember: 'agnoster' requires a Powerline-compatible font!
-ZSH_THEME="agnoster"
+ZSH_THEME="bureau"
 
 # List of plugins to load. These must be installed separately (you did this).
 plugins=(
@@ -15,7 +15,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # -------------------- CUSTOM ALIASES AND FUNCTIONS --------------------
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Check if exa is installed before setting aliases
 if command -v exa &> /dev/null; then
@@ -30,13 +29,16 @@ else
 fi
 
 # General aliases
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep='grep --color=auto'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .='cd ~'
+alias nv='nvim'
+alias nd='neovide'
 
 # -------------------- TMUX LAUNCHER --------------------
 
-# Start tmux if not already running and the shell is interactive.
-if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [[ $- == *i* ]]; then
-    # Attach to the session named 'main' or create a new one with that name.
-    # The '-c $HOME' ensures the session always starts in the home directory (~).
-    exec tmux new-session -A -s main -c $HOME
-fi
+cd ~
+tmux
+tmux source-file ~/.tmux.conf

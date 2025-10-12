@@ -25,12 +25,6 @@ return {
   --
   -- == Examples of Adding Plugins ==
 
-  "andweeb/presence.nvim",
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function() require("lsp_signature").setup() end,
-  },
   "RRethy/base16-nvim",
   {
     "RRethy/base16-nvim",
@@ -53,64 +47,65 @@ return {
       --
       -- ## Set your preferred base16 theme.
       -- ## All builtin colorschemes can be accessed with |:colorscheme|.
-      vim.cmd "colorscheme base16-black-metal-gorgoroth"
+      -- vim.cmd "colorscheme base16-black-metal-gorgoroth"
+      vim.cmd "colorscheme base16-apathy"
       -- vim.cmd "colorscheme base16-gruvbox-dark-hard"
       --
       -- ## Alternatively, you can provide a table specifying your colors to the setup function.
-      require("base16-colorscheme").setup {
-        base00 = "#1a1a1a", -- Background: very dark
-        base01 = "#2a2a2a",
-        base02 = "#3a3a3a",
-        base03 = "#7a7a7a", -- Comments color
-        base04 = "#5a5a5a",
-        base05 = "#cacaca", -- Default text: bright silver for more pronounced contrast
-        base06 = "#e0e0e0",
-        base07 = "#cacaca", -- Lightest foreground
-        base08 = "#cacaca",
-        base09 = "#cacaca",
-        base0A = "#cacaca",
-        base0B = "#cacaca",
-        base0C = "#cacaca",
-        base0D = "#cacaca",
-        base0E = "#cacaca",
-        base0F = "#cacaca",
-        --
-        -- base00 = "#1a1a1a", -- Background: very dark
-        -- base01 = "#2a2a2a",
-        -- base02 = "#3a3a3a",
-        -- base03 = "#4a4a4a",
-        -- base04 = "#5a5a5a",
-        -- base05 = "#cacaca", -- Default text: bright silver for more pronounced contrast
-        -- base06 = "#e0e0e0",
-        -- base07 = "#cacaca", -- Lightest foreground
-        -- base08 = "#cacaca",
-        -- base09 = "#cacaca",
-        -- base0A = "#cacaca",
-        -- base0B = "#cacaca",
-        -- base0C = "#cacaca",
-        -- base0D = "#cacaca",
-        -- base0E = "#cacaca",
-        -- base0F = "#cacaca",
-        --
-        -- base00 = "#1a1a1a", -- Background: very dark
-        -- base01 = "#2a2a2a",
-        -- base02 = "#3a3a3a",
-        -- base03 = "#4a4a4a",
-        -- base04 = "#5a5a5a",
-        -- base05 = "#cacaca", -- Default text: bright silver for more pronounced contrast
-        -- base06 = "#e0e0e0",
-        -- base07 = "#cacaca", -- Lightest foreground
-        -- Accent colors (all in grayscale, with increased contrast)
-        -- base07 = "#f0f0f0", -- Lightest foreground
-        -- base08 = "#404040",
-        -- base09 = "#505050",
-        -- base0A = "#606060",
-        -- base0B = "#707070",
-        -- base0C = "#808080",
-        -- base0D = "#909090",
-        -- base0E = "#a0a0a0",
-        -- base0F = "#b0b0b0",
-      }
+      -- require("base16-colorscheme").setup {
+      --   base00 = "#1a1a1a", -- Background: very dark
+      --   base01 = "#2a2a2a",
+      --   base02 = "#3a3a3a",
+      --   base03 = "#7a7a7a", -- Comments color
+      --   base04 = "#5a5a5a",
+      --   base05 = "#cacaca", -- Default text: bright silver for more pronounced contrast
+      --   base06 = "#e0e0e0",
+      --   base07 = "#cacaca", -- Lightest foreground
+      --   base08 = "#cacaca",
+      --   base09 = "#cacaca",
+      --   base0A = "#cacaca",
+      --   base0B = "#cacaca",
+      --   base0C = "#cacaca",
+      --   base0D = "#cacaca",
+      --   base0E = "#cacaca",
+      --   base0F = "#cacaca",
+      --
+      -- base00 = "#1a1a1a", -- Background: very dark
+      -- base01 = "#2a2a2a",
+      -- base02 = "#3a3a3a",
+      -- base03 = "#4a4a4a",
+      -- base04 = "#5a5a5a",
+      -- base05 = "#cacaca", -- Default text: bright silver for more pronounced contrast
+      -- base06 = "#e0e0e0",
+      -- base07 = "#cacaca", -- Lightest foreground
+      -- base08 = "#cacaca",
+      -- base09 = "#cacaca",
+      -- base0A = "#cacaca",
+      -- base0B = "#cacaca",
+      -- base0C = "#cacaca",
+      -- base0D = "#cacaca",
+      -- base0E = "#cacaca",
+      -- base0F = "#cacaca",
+      --
+      -- base00 = "#1a1a1a", -- Background: very dark
+      -- base01 = "#2a2a2a",
+      -- base02 = "#3a3a3a",
+      -- base03 = "#4a4a4a",
+      -- base04 = "#5a5a5a",
+      -- base05 = "#cacaca", -- Default text: bright silver for more pronounced contrast
+      -- base06 = "#e0e0e0",
+      -- base07 = "#cacaca", -- Lightest foreground
+      -- Accent colors (all in grayscale, with increased contrast)
+      -- base07 = "#f0f0f0", -- Lightest foreground
+      -- base08 = "#404040",
+      -- base09 = "#505050",
+      -- base0A = "#606060",
+      -- base0B = "#707070",
+      -- base0C = "#808080",
+      -- base0D = "#909090",
+      -- base0E = "#a0a0a0",
+      -- base0F = "#b0b0b0",
+      -- }
     end,
   },
   "folke/flash.nvim",
