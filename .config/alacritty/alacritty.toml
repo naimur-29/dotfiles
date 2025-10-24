@@ -1,0 +1,119 @@
+# This is the primary configuration file for Alacritty, a fast, GPU-accelerated terminal emulator.
+# It uses TOML format. Save this file as ~/.config/alacritty/alacritty.toml
+
+# ====================================================================
+# FONT CONFIGURATION
+# ====================================================================
+
+[font]
+# The user specifically requested JetBrainsMono Nerd Font
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+size = 14.0 # 14.0
+
+# ====================================================================
+# WINDOW
+# ====================================================================
+
+[window]
+# Padding (extra space around the terminal content)
+padding = { x = 10, y = 10 }
+
+# Opacity (0.0 - 1.0). Set to slightly transparent for a modern look.
+opacity = 1.0
+decorations = "none"
+
+# Blur the background if opacity is less than 1.0 (requires a compositor)
+blur = true
+
+# ====================================================================
+# SHELL
+# ====================================================================
+
+# Execute zsh, which the user indicated they are using.
+[shell]
+program = "/bin/zsh"
+# Use -l flag to load configuration files correctly (like Oh My Zsh)
+args = ["-l"]
+
+
+# ====================================================================
+# COLORS - "BATMAN" THEME (Moody Dark Blue/Black)
+# ====================================================================
+
+[colors.primary]
+# Background: Very dark, almost black blue (Hex: 0A1117)
+background = "0x0A1117"
+# Foreground: Soft light gray/white for main text (Hex: E0E0E0)
+foreground = "0xE0E0E0"
+
+# Selection colors
+[colors.selection]
+# Selection background: Dark, slightly lighter blue to contrast with the primary background
+background = "0x1A2533"
+text = "CellForeground"
+
+# Cursor colors - Yellow for a pop of light/gadget look
+[cursor]
+
+[colors.cursor]
+# Cursor block color
+cursor = "0xF2BE38"
+# Color of the text under the cursor
+text = "CellBackground"
+
+
+# ANSI Standard Colors
+[colors.normal]
+black = "0x000000"
+# Red: Muted but strong for errors/warnings
+red = "0xDE3532"
+# Green: Standard green
+green = "0x3AD900"
+# Yellow: Moody amber
+yellow = "0xF2BE38"
+# Blue: Moody, dark blue (reflects the Batman aesthetic)
+blue = "0x5395F7"
+magenta = "0xBE6CFF"
+cyan = "0x40B3FF"
+white = "0xCCCCCC"
+
+# Bright ANSI Colors (for use with 'ls' or custom prompt styles)
+[colors.bright]
+black = "0x555753"
+red = "0xFF5C5C"
+green = "0x8AFF8A"
+yellow = "0xFFE082"
+blue = "0x82AAFF"
+magenta = "0xFF80FF"
+cyan = "0x80FFFF"
+white = "0xFFFFFF"
+
+# ====================================================================
+# KEY BINDINGS (Useful additions)
+# ====================================================================
+
+# Press Ctrl+Shift+C to copy (standard Linux terminal shortcut)
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+# Press Ctrl+Shift+V to paste (standard Linux terminal shortcut)
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+# Press Ctrl+- to zoom out
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
+# Press Ctrl+= to zoom in
+[[keyboard.bindings]]
+key = "Equals"
+mods = "Control"
+action = "IncreaseFontSize"
