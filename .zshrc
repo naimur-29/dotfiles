@@ -21,7 +21,7 @@ if command -v eza &> /dev/null; then
     # exa aliases
     alias ls='eza --icons'               # Basic list with file icons
     alias ll='eza -lga --git --icons'    # Long, detailed list with icons and Git status
-    alias tree='exa -T'                  # Tree view
+    alias tree='eza -T --icons'                  # Tree view
 else
     # Fallback to standard ls if exa is not available
     alias ls='ls --color=auto'
@@ -31,11 +31,8 @@ fi
 # General aliases
 # alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias grep='grep --color=auto'
-# alias ..='cd ..'
-# alias ...='cd ../..'
-# alias .='cd ~'
 alias nv='nvim'
-# alias nd='neovide'
+alias nd='neovide'
 
 # -------------------- TMUX LAUNCHER --------------------
 
@@ -50,5 +47,7 @@ fi
 # Load nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+export PATH=$PATH:/usr/local/go/bin  
 
 . "$HOME/.local/bin/env"
