@@ -47,9 +47,10 @@ return {
       --
       -- ## Set your preferred base16 theme.
       -- ## All builtin colorschemes can be accessed with |:colorscheme|.
-      vim.cmd "colorscheme base16-sandcastle"
       -- vim.cmd "colorscheme astrodark"
-      -- vim.cmd "colorscheme base16-gruvbox-dark-hard"
+      vim.cmd "colorscheme base16-sandcastle"
+      -- vim.cmd "colorscheme base16-black-metal"
+      -- vim.cmd "colorscheme base16-icy"
       --
       -- ## Alternatively, you can provide a table specifying your colors to the setup function.
       -- require("base16-colorscheme").setup {

@@ -51,3 +51,8 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export PATH=$PATH:/usr/local/go/bin  
 
 . "$HOME/.local/bin/env"
+
+# Arduino CLI
+export PATH="$HOME/bin:$PATH"
+# Enable zsh completion for arduino-cli
+source <(arduino-cli completion zsh)
